@@ -2,6 +2,7 @@
 if(${CMAKE_CXX_STANDARD} LESS 23)
     message("Using tl::optional")
     set(ENABLE_TESTING OFF)
+    set(OPTIONAL_BUILD_TESTS OFF)
     FetchContent_Declare(
         optional
         GIT_REPOSITORY https://github.com/TartanLlama/optional.git
