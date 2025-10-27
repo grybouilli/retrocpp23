@@ -14,7 +14,7 @@ if(USE_ALL OR USE_EXPECTED23)
     include(expected23.cmake)
     target_link_libraries(${PROJECT_NAME}
       INTERFACE
-        expected::tl-expected
+        tl::expected
     )
 endif()
 
@@ -22,7 +22,7 @@ if(USE_ALL OR USE_OPTIONAL23)
     include(optional23.cmake)
     target_link_libraries(${PROJECT_NAME}
       INTERFACE
-        optional::tl-optional
+        tl::optional
     )
 endif()
 
