@@ -5,7 +5,7 @@ add_library(retrocpp23::expected ALIAS retrocpp23_expected)
 
 if(CMAKE_CXX_STANDARD LESS 23)
     message("Using tl::expected as retrocpp23::expected")
-    set(ENABLE_TESTING OFF)
+    set(BUILD_TESTING OFF)
     FetchContent_Declare(
         tl_expected
         GIT_REPOSITORY https://github.com/TartanLlama/expected.git
