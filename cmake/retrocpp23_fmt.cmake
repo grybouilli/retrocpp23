@@ -8,6 +8,7 @@ if(CMAKE_CXX_STANDARD LESS 23)
     FetchContent_Declare(
         fmt
         GIT_REPOSITORY https://github.com/grybouilli/fmt
+        GIT_TAG ea5cf3220c36e6df490a493a02e10b8876217778
     )
     FetchContent_MakeAvailable(fmt)
 
