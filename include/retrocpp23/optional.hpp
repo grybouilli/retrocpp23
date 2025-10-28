@@ -8,7 +8,7 @@
 #include <tl/optional.hpp>
 
 namespace std {
-    inline namespace expected_compat {
+    inline namespace optional_compat {
         template <typename T>
         using optional = tl::optional<T>;
         constexpr auto nullopt = tl::nullopt;
