@@ -3,6 +3,10 @@ include(FetchContent)
 add_library(retrocpp23_expected INTERFACE)
 add_library(retrocpp23::expected ALIAS retrocpp23_expected)
 
+install(
+    TARGETS retrocpp23_expected
+    EXPORT retrocpp23Targets
+)
 if(CMAKE_CXX_STANDARD LESS 23)
     message("Using tl::expected as retrocpp23::expected")
     set(BUILD_TESTING OFF)

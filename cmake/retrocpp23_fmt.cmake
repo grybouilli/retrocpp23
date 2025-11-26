@@ -3,9 +3,13 @@ include(FetchContent)
 add_library(retrocpp23_fmt INTERFACE)
 add_library(retrocpp23::fmt ALIAS retrocpp23_fmt)
 
+install(
+    TARGETS retrocpp23_fmt
+    EXPORT retrocpp23Targets
+)
 if(CMAKE_CXX_STANDARD LESS 23)
     set(FMT_TEST OFF)
-    set(FMT_INSTALL OFF)
+    set(FMT_INSTALL ON)
     FetchContent_Declare(
         fmt
         GIT_REPOSITORY https://github.com/fmtlib/fmt
