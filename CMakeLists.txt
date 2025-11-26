@@ -6,7 +6,7 @@ add_library(retrocpp23 INTERFACE)
 add_library(retrocpp23::retrocpp23 ALIAS retrocpp23)
 
 target_include_directories(${PROJECT_NAME} INTERFACE
-  $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
