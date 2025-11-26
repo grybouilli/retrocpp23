@@ -5,9 +5,9 @@ include(FetchContent)
 add_library(retrocpp23 INTERFACE)
 add_library(retrocpp23::retrocpp23 ALIAS retrocpp23)
 
-target_include_directories(retrocpp23 INTERFACE 
-  $<BUILD_INTERFACE:include>
-  $<INSTALL_INTERFACE:include>
+target_include_directories(${PROJECT_NAME} INTERFACE
+  $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
 # Optionally include helper modules depending on what the user wants
