@@ -1,6 +1,6 @@
 #pragma once
 
-#if __cplusplus >= 202002L  // std::format defined in C++20
+#ifdef __cpp_lib_format  // std::format defined in C++20
 #pragma message("Using std::format")
 #include <format>
 #else

@@ -1,6 +1,6 @@
 #pragma once
 
-#if __cplusplus > 202002L  // std::optional monads defined in C++23
+#if __cpp_lib_optional >= 202110L  // std::optional monads defined in C++23
 #pragma message("Using std::optional")
 #include <optional>
 #else
