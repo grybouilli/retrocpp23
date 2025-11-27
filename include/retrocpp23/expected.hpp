@@ -1,6 +1,6 @@
 #pragma once
 
-#ifndef USE_TL_EXPECTED  // std::unexpected defined in C++23
+#if __GNUC__ >= 12 || __clang_major__ >= 16  // std::unexpected defined in C++23
 #pragma message("Using std::expected")
 #include <expected>
 #else
