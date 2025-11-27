@@ -20,6 +20,7 @@ if(  CMAKE_CXX_STANDARD LESS 23 OR
     FetchContent_MakeAvailable(tl_expected)
 
     target_link_libraries(retrocpp23_expected INTERFACE tl::expected)
+    add_compile_definitions(USE_TL_EXPECTED)
 else()
     message("Using std::expected")
 endif()

@@ -1,6 +1,6 @@
 #pragma once
 
-#if __cplusplus > 202002L  // std::unexpected defined in C++23
+#ifndef USE_TL_EXPECTED  // std::unexpected defined in C++23
 #pragma message("Using std::expected")
 #include <expected>
 #else
