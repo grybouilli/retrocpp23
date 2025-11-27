@@ -12,6 +12,10 @@ namespace std {
         template <typename T>
         using optional = tl::optional<T>;
         constexpr auto nullopt = tl::nullopt;
+
+        template <typename T>
+        using optionalm = tl::optional<T>;
+        constexpr auto nulloptm = tl::nullopt;
     }
 }
 #endif
