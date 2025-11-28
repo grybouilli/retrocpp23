@@ -9,8 +9,8 @@ install(
 )
 if(  CMAKE_CXX_STANDARD LESS 23 OR 
     (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 12 AND CMAKE_COMPILER_IS_GNUCC) OR 
-    (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 16 AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang"))
-    message("Using tl::optional as retrocpp23::optional")
+    (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 14 AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang"))
+    message("Using tl::optional as r23::optional")
     set(ENABLE_TESTING OFF)
     set(OPTIONAL_BUILD_TESTS OFF)
     FetchContent_Declare(
@@ -22,5 +22,5 @@ if(  CMAKE_CXX_STANDARD LESS 23 OR
 
     target_link_libraries(retrocpp23_optional INTERFACE tl::optional)
 else()
-    message("Using std::optional")
+    message("Using std::optional as r23::optional")
 endif()

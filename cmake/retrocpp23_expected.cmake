@@ -8,9 +8,9 @@ install(
     EXPORT retrocpp23Targets
 )
 if(  CMAKE_CXX_STANDARD LESS 23 OR 
-    (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 12 AND CMAKE_COMPILER_IS_GNUCC) OR 
+    (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 13 AND CMAKE_COMPILER_IS_GNUCC) OR 
     (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 16 AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang"))
-    message("Using tl::expected as retrocpp23::expected")
+    message("Using tl::expected as r23::expected")
     set(BUILD_TESTING OFF)
     FetchContent_Declare(
         tl_expected
@@ -21,5 +21,5 @@ if(  CMAKE_CXX_STANDARD LESS 23 OR
 
     target_link_libraries(retrocpp23_expected INTERFACE tl::expected)
 else()
-    message("Using std::expected")
+    message("Using std::expected as r23::expected")
 endif()
