@@ -1,5 +1,7 @@
 #pragma once
 
+#include <version>  
+
 #if __cpp_lib_optional >= 202110L  // std::optional monads defined in C++23
 #pragma message("Using std::optional")
 #include <optional>

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <version>  
+
 #if __cpp_lib_expected >= 202211L  // std::unexpected defined in C++23
 #pragma message("Using std::expected")
 #include <expected>
