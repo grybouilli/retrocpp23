@@ -14,6 +14,7 @@ target_include_directories(${PROJECT_NAME} INTERFACE
 option(USE_FMT23 "Use fmt23" ON)
 option(USE_OPTIONAL23 "Use optional23" ON)
 option(USE_EXPECTED23 "Use expected23" ON)
+option(RETROCPP_FORCE_FIND_PACKAGE "Find dependencies using find_package rather than FetchContent" OFF)
 
 if(USE_EXPECTED23)
   include(${CMAKE_CURRENT_LIST_DIR}/cmake/retrocpp23_expected.cmake)
