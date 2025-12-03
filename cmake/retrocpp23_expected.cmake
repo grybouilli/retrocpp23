@@ -20,6 +20,7 @@ if(  CMAKE_CXX_STANDARD LESS 23 OR
     FetchContent_MakeAvailable(tl_expected)
 
     target_link_libraries(retrocpp23_expected INTERFACE tl::expected)
+    set(TL_EXPECTED_USED "find_dependency(tl-expected REQUIRED)" CACHE INTERNAL "")
 else()
     message("Using std::expected as r23::expected")
 endif()

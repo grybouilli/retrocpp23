@@ -21,6 +21,7 @@ if(CMAKE_CXX_STANDARD LESS 23 OR
     FetchContent_MakeAvailable(fmt)
 
     target_link_libraries(retrocpp23_fmt INTERFACE fmt::fmt)
+    set(FMT_USED "find_dependency(fmt REQUIRED)" CACHE INTERNAL "")
 else()
     message("Using std::format")
 endif()
