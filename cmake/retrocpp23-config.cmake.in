@@ -2,6 +2,7 @@
 
 include("${CMAKE_CURRENT_LIST_DIR}/retrocpp23Targets.cmake")
 
+include(CMakeFindDependencyMacro)
 @TL_EXPECTED_USED@
 @TL_OPTIONAL_USED@
 @FMT_USED@

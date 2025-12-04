@@ -20,11 +20,11 @@ if(CMAKE_CXX_STANDARD LESS 23 OR
             fmt
             GIT_REPOSITORY https://github.com/fmtlib/fmt
             GIT_TAG 12.0.0
-            FIND_PACKAGE_ARGS NAMES fmt 
+            FIND_PACKAGE_ARGS NAMES fmt
         )
         FetchContent_MakeAvailable(fmt)
 
-        target_link_libraries(retrocpp23_fmt INTERFACE fmt::fmt)
+        target_link_libraries(retrocpp23_fmt INTERFACE fmt::fmt-header-only)
     endif()
     set(FMT_USED "find_dependency(fmt REQUIRED)" CACHE INTERNAL "")
 else()
