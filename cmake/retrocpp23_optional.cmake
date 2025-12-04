@@ -24,8 +24,8 @@ if(  CMAKE_CXX_STANDARD LESS 23 OR
         )
         FetchContent_MakeAvailable(tl_optional)
 
-        target_link_libraries(retrocpp23_optional INTERFACE tl::optional)
     endif()
+    target_link_libraries(retrocpp23_optional INTERFACE tl::optional)
     set(TL_OPTIONAL_USED "find_dependency(tl-optional REQUIRED)" CACHE INTERNAL "")
 else()
     message("Using std::optional as r23::optional")
