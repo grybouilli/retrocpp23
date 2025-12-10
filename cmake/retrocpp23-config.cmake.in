@@ -6,3 +6,4 @@ include(CMakeFindDependencyMacro)
 @TL_EXPECTED_USED@
 @TL_OPTIONAL_USED@
 @FMT_USED@
+@JTHREAD_USED@
